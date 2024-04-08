@@ -115,7 +115,7 @@ class _MapViewWidgetState extends State<MapViewWidget> {
                       onPressed: () {
                         setState(() {
                           _forecastDate =
-                              _forecastDate.subtract(const Duration(hours: 3));
+                              _forecastDate.subtract(const Duration(hours: 5));
                         });
                         _initTiles(_forecastDate);
                       },
@@ -156,7 +156,7 @@ class _MapViewWidgetState extends State<MapViewWidget> {
                           : () {
                         setState(() {
                           _forecastDate = _forecastDate
-                              .add(const Duration(hours: 3));
+                              .add(const Duration(hours: 5));
                         });
                         _initTiles(_forecastDate);
                       },

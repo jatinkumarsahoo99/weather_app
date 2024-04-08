@@ -35,13 +35,11 @@ class WeatherBlocBloc extends Bloc<WeatherBlocEvent, WeatherBlocState> {
 					event.position.longitude,
 				);
 
-        String value = await rootBundle.loadString('assets/json/data.json');
-        var map = json.decode(value);
+        // String value = await rootBundle.loadString('assets/json/data.json');
+        // var map = json.decode(value);
+        // WeatherData ?weatherData = WeatherData(cur.WeatherDataCurrent.fromJson(map as Map<String, dynamic>), hour.WeatherDataHourly.fromJson(map), daily.WeatherDataDaily.fromJson(map));
 
-        WeatherData ?weatherData = WeatherData(cur.WeatherDataCurrent.fromJson(map as Map<String, dynamic>),
-            hour.WeatherDataHourly.fromJson(map), daily.WeatherDataDaily.fromJson(map));
-
-        // WeatherData ? weatherData = await FetchWeatherDataRepo.processData(event.position.latitude, event.position.longitude);
+        WeatherData ? weatherData = await FetchWeatherDataRepo.processData(event.position.latitude, event.position.longitude);
         emit(WeatherBlocSuccess(weather:weather,weatherData: weatherData));
       } catch (e) {
         if (kDebugMode) {
