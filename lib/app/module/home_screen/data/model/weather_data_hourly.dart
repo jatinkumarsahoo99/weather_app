@@ -6,6 +6,16 @@ class WeatherDataHourly {
       WeatherDataHourly(
           hourly:
               List<Hourly>.from(json['hourly'].map((e) => Hourly.fromJson(e))));
+
+  List<Map<String,dynamic>> toJson() {
+
+    if( hourly.isNotEmpty){
+      return hourly.map((e) => e.toJson()).toList();
+    }else{
+      return [];
+    }
+
+  }
 }
 
 class Hourly {

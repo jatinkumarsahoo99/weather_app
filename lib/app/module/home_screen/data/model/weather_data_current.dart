@@ -5,6 +5,8 @@ class WeatherDataCurrent {
 
   factory WeatherDataCurrent.fromJson(Map<String, dynamic> json) =>
       WeatherDataCurrent(current: Current.fromJson(json['current']));
+
+  Map<String, dynamic> toJson() => current.toJson();
 }
 
 class Current {

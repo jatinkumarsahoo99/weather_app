@@ -46,6 +46,7 @@ dependencies:
   permission_handler:
   google_maps_flutter_android:
   google_maps_flutter_platform_interface:
+  shared_preferences:
 
 dev_dependencies:
   flutter_test:

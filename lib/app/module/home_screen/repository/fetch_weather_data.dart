@@ -27,6 +27,7 @@ class FetchWeatherDataRepo {
             }
             completer.complete(weatherData);
           });
+
     } catch (e) {
       if (kDebugMode) {
         print(">>>>>>Exception$e");

@@ -15,4 +15,11 @@ class WeatherData {
   WeatherDataCurrent getCurrentWeather() => current!;
   WeatherDataHourly getHourlyWeather() => hourly!;
   WeatherDataDaily getDailyWeather() => daily!;
+
+  Map<String, dynamic> toJson() => {
+    "current":current!.toJson(),
+    "hourly":hourly!.toJson(),
+    "daily":daily!.toJson(),
+  };
+
 }

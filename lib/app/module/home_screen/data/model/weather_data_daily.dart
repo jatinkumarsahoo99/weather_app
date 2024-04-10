@@ -5,6 +5,16 @@ class WeatherDataDaily {
   factory WeatherDataDaily.fromJson(Map<String, dynamic> json) =>
       WeatherDataDaily(
           daily: List<Daily>.from(json['daily'].map((e) => Daily.fromJson(e))));
+
+  List<Map<String,dynamic>> toJson() {
+
+    if( daily.isNotEmpty){
+      return daily.map((e) => e.toJson()).toList();
+    }else{
+      return [];
+    }
+
+  }
 }
 
 class Daily {
