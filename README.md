@@ -3,6 +3,9 @@
 It's a Flutter Weather application.Available in both mobile nad web.
 We are using https://openweathermap.org/ api's for fetching weather data and using google map for Showing temperature and precipitation layer in map.
 
+## Web Local Data
+![local data](https://github.com/jatinkumarsahoo99/weather_app/assets/89034172/46b5479c-b8b5-46e9-99f6-5b24a4f90df8)
+
 
 ## Getting Started
 
