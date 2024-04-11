@@ -92,7 +92,7 @@ class WeatherBlocBloc extends Bloc<WeatherBlocEvent, WeatherBlocState> {
           WeatherData ? weatherData = await FetchWeatherDataRepo.processData(event.position.latitude, event.position.longitude);
           emit(WeatherBlocSuccess(weather:weather,weatherData: weatherData));
           await SharedPreference.setData(key: "data", data: jsonEncode(weatherData?.toJson()??""));
-          await SharedPreference.setData(key: "setFirst", data: "true");
+          await SharedPreference.setData(key: "setFirst", data: "false");
           await SharedPreference.setData(key: "dateTime", data: "${DateTime.now()}");
           emit(WeatherBlocSuccess(weather:weather,weatherData: weatherData));
         }
